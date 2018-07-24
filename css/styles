@@ -1,0 +1,271 @@
+@font-face {
+  font-family: Frutiger;
+  src: url('../fonts/frutiger-bold.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+@font-face {
+  font-family: Frutigerblack;
+  src: url('../fonts/frutiger-black.otf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+@font-face {
+  font-family: Frutigerblackitalic;
+  src: url('../fonts/frutiger-black-Italic.ttf');
+  font-style: normal;
+  font-weight: normal;
+}
+
+
+:root {
+  --milo: #159c37;
+  --white: #ffffff;
+  --yellow: #fcdc01;
+  --grey: #878888;
+  --gradient: linear-gradient(#ffffff 41%, #07ac36 41%);
+}
+
+body, html {
+  font-family: Frutiger, Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  -webkit-font-smoothing: antialiased;
+}
+
+a, .uk-link, a:hover, .uk-link:hover {
+  color: var(--white);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* HEADERS & TEXTS */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Frutigerblack, Helvetica, sans-serif;
+  font-weight: 800;
+  color: var(--milo);
+  margin: 0;
+}
+
+h2 {
+  font-family: Frutigerblackitalic, Helvetica, sans-serif;
+  font-size: 36px;
+}
+
+h3 {
+  font-family: Frutigerblackitalic, Helvetica, sans-serif;
+  font-size: 26px;
+}
+
+h5 {
+  font-family: Frutiger, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+h6, p {
+  font-family: Frutiger, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+hr {
+  border-top: 2px solid var(--yellow);
+}
+
+.text-yellow {
+  color: var(--yellow);
+}
+
+.bg-yellow {
+  background: var(--yellow);
+  &:after {
+    content: "";
+    position: absolute;
+    left: -13px;
+    border-style: solid;
+    border-width: 0px 0px 39px 13px;
+    border-color: transparent transparent var(--yellow) transparent;
+    z-index: 9998;
+    margin: -4px 0 0 0;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    right: -13px;
+    border-style: solid;
+    border-width: 0px 0px 39px 13px;
+    border-color: transparent transparent var(--yellow) transparent;
+    z-index: 9998;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    margin: -4px 0 0 0;
+  }
+}
+
+.menu {
+  height: 65px;
+  color: var(--milo);
+}
+
+.color {
+  background: var(--milo);
+  color: var(--white);
+}
+
+.gradient {
+  background: var(--gradient);
+}
+
+/* MENU */
+
+.dropdown-menu.show {
+  display: inline-flex;
+  top: 78px;
+  border-radius: 0px;
+  border-color: var(--white);
+}
+
+.arrow-search:after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: -15px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 17px 17px 17px;
+  border-color: transparent transparent var(--white) transparent;
+  z-index: 9998;
+}
+
+.arrow-products:after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: -15px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 17px 17px 17px;
+  border-color: transparent transparent var(--white) transparent;
+  z-index: 9998;
+  right: 180px;
+  top: -15px;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropdown-item {
+  color: var(--milo);
+  &:hover {
+    color: var(--milo);
+    border-bottom: 2px solid var(--yellow);
+  }
+}
+
+/* MODAL */
+
+.buy-now {
+  background-color: var(--milo);
+  color: white;
+  padding: 10px 20px;
+  transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  border: 0px;
+  cursor: pointer;
+}
+
+#mybutton {
+  position: fixed;
+  top: 600px;
+  right: -54px;
+  z-index: 1000;
+}
+
+.slide {
+  min-height: 440px;
+  margin-top: 80px;
+}
+
+.btn-srch {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  border: 0;
+  background: transparent;
+}
+
+.fa-angle-right {
+  color: var(--yellow);
+  margin-left: 10px;
+}
+
+.figure-caption {
+  border-bottom: 1px solid var(--grey);
+  padding: 10px 0 10px 0;
+}
+
+.carousel-caption {
+  position: absolute;
+  width: 500px;
+  bottom: 120px;
+  left: 50%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  text-align: left;
+}
+
+#custom-search-input {
+  .search {
+    width: 100%;
+    padding-right: 1px;
+    padding-left: 15px;
+    margin-bottom: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: solid 1px var(--yellow);
+  }
+  button {
+    border: 0;
+    background: none;
+    padding: 10px;
+    position: absolute;
+    right: 0;
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: var(--grey);
+    cursor: unset;
+    z-index: 2;
+  }
+}
+
+.search-menu {
+  z-index: 0;
+  outline: none;
+  box-shadow: none;
+  border: 0 0 2px 0 solid var(--yellow);
+}
+
+.search:focus {
+  z-index: 0;
+  outline: none;
+  box-shadow: none;
+  border-bottom: 2px solid var(--yellow);
+}
+
+.modal-header, .modal-footer {
+  border: 0;
+  padding: 3px 10px;
+}
